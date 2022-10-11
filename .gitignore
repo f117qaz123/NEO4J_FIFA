@@ -1,0 +1,17 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+.cache
+.env
+
+client/.env
+coverage
+client/storybook-static
+
+# dependencies
+node_modules
+
+# production
+build
+
+.idea/
+.vscode/
