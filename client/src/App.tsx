@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayersListTable from "./components/PlayerListTable";
+import PlayersListTable from "./components/PlayerListTable/PlayerListTable";
 
 const App = () => (
     <>

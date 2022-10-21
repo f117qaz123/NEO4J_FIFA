@@ -1,8 +1,8 @@
 import React from 'react';
-import { PlayerBriefData } from "./PlayerListTable";
+import { PlayerBriefData } from "../PlayerListTable/PlayerListTable";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
-import { getClubSrc, getPlayerSrc } from "../utils";
+import { getClubSrc, getPlayerSrc } from "../../utils";
 
 const PlayerTableRow = ({playerData}: { playerData: PlayerBriefData }) => (
   <TableRow

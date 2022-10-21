@@ -1,6 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 
-const GET_PLAYERS = gql`
+export const GET_PLAYERS = gql`
  query {
   players ( options: { limit: 100 } ) {
     sofifa_id,

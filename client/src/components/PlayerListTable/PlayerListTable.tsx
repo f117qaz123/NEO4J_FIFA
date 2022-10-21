@@ -5,9 +5,9 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { usePlayers } from "../hooks/usePlayers";
-import { tableCategories } from "../utils";
-import PlayerTableRow from "./PlayerTableRow";
+import { usePlayers } from "../../hooks/usePlayers";
+import { tableCategories } from "../../utils";
+import PlayerTableRow from "../PlayerTableRow/PlayerTableRow";
 import { Paper } from "@mui/material";
 
 interface Club {
@@ -37,7 +37,7 @@ const PlayersListTable = () => {
   }
 
   const tableRows = data.players.map((playerData: PlayerBriefData) => (
-    <PlayerTableRow key= {playerData.sofifa_id} playerData={playerData} />
+    <PlayerTableRow key={playerData.sofifa_id} playerData={playerData} />
   ));
 
   return (
