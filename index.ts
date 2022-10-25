@@ -27,6 +27,11 @@ type players {
 type clubs {
   Name: String!
   ID: Int!
+  Overall: Int!
+  Attack: Int!
+  Midfield: Int!
+  Defence: Int!
+  LeagueId: Int!
   players: [players!]! @relationship(type: "FROM", direction: IN)
 }
 
