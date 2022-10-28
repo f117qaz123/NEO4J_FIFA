@@ -17,7 +17,7 @@ const ClubList = () => {
   ));
 
   return (
-    <Grid container spacing={3} justifyContent="center">
+    <Grid my={2} container spacing={3} justifyContent="center">
       {clubCards}
     </Grid>
   );
