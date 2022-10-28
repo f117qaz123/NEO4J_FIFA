@@ -18,8 +18,8 @@ const PlayerTableRow = ({playerData}: { playerData: PlayerBriefData }) => (
     <TableCell align="right">{playerData.overall}</TableCell>
     <TableCell align="right">{playerData.potential}</TableCell>
     <TableCell align="center">
-      <span><img src={getClubSrc(playerData.clubs.ID)} alt={playerData.clubs.Name} /></span>
-      {playerData.clubs.Name}
+      <img src={getClubSrc(playerData.clubs.ID)} alt={playerData.clubs.Name} />
+      <div>{playerData.clubs.Name}</div>
     </TableCell>
   </TableRow>
 );
