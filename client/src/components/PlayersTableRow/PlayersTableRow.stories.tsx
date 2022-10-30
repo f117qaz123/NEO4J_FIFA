@@ -1,16 +1,16 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import PlayerTableRow from "./PlayerTableRow";
+import PlayersTableRow from "./PlayersTableRow";
 
 export default {
-  title: 'PlayerTableRow',
-  component: PlayerTableRow,
+  title: 'PlayersTableRow',
+  component: PlayersTableRow,
   parameters: {
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof PlayerTableRow>;
+} as ComponentMeta<typeof PlayersTableRow>;
 
-const Template: ComponentStory<typeof PlayerTableRow> = (args) => <PlayerTableRow {...args} />;
+const Template: ComponentStory<typeof PlayersTableRow> = (args) => <PlayersTableRow {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   playerData: {

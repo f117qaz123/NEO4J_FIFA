@@ -1,8 +1,8 @@
 import React from 'react';
-import { PlayerBriefData } from "../PlayerListTable/PlayerListTable";
+import { PlayerBriefData } from "../PlayersList/PlayersList";
 import { tableCategories } from "../../utils";
 import TableCell from "@mui/material/TableCell";
-import PlayerTableRow from "../PlayerTableRow/PlayerTableRow";
+import PlayersTableRow from "../PlayersTableRow/PlayersTableRow";
 import TableContainer from "@mui/material/TableContainer";
 import { Paper } from "@mui/material";
 import Table from "@mui/material/Table";
@@ -10,7 +10,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TableBody from "@mui/material/TableBody";
 
-const Players = ({playersData}: { playersData: PlayerBriefData[] }) => {
+const PlayersTable = ({playersData}: { playersData: PlayerBriefData[] }) => {
   const tableHeadRowCells = () => {
     return (
       <>
@@ -22,7 +22,7 @@ const Players = ({playersData}: { playersData: PlayerBriefData[] }) => {
   };
 
   const tableRowsCells = playersData.map((playerData: PlayerBriefData) => (
-    <PlayerTableRow key={playerData.sofifa_id} playerData={playerData}/>
+    <PlayersTableRow key={playerData.sofifa_id} playerData={playerData}/>
   ));
 
   return (
@@ -41,4 +41,4 @@ const Players = ({playersData}: { playersData: PlayerBriefData[] }) => {
   );
 };
 
-export default Players
+export default PlayersTable

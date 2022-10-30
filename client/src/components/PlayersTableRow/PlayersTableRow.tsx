@@ -1,10 +1,10 @@
 import React from 'react';
-import { PlayerBriefData } from "../PlayerListTable/PlayerListTable";
+import { PlayerBriefData } from "../PlayersList/PlayersList";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import { getClubSrc, getPlayerSrc } from "../../utils";
 
-const PlayerTableRow = ({playerData}: { playerData: PlayerBriefData }) => (
+const PlayersTableRow = ({playerData}: { playerData: PlayerBriefData }) => (
   <TableRow
     key={playerData.sofifa_id}
     sx={{"&:last-child td, &:last-child th": {border: 0}}}
@@ -24,4 +24,4 @@ const PlayerTableRow = ({playerData}: { playerData: PlayerBriefData }) => (
   </TableRow>
 );
 
-export default PlayerTableRow;
+export default PlayersTableRow;
