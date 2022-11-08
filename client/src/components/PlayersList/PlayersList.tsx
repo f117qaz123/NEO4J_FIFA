@@ -1,6 +1,6 @@
 import React from 'react';
 import { usePlayers } from "../../hooks/usePlayers";
-import Players from "../Players/Players";
+import PlayersTable from "../PlayersTable/PlayersTable";
 
 interface Club {
   ID: number;
@@ -25,7 +25,7 @@ const PlayersListTable = () => {
   }
 
   return (
-    <Players playersData={data.players} />
+    <PlayersTable playersData={data.players} />
   );
 };
 

@@ -23,7 +23,7 @@ const navBarOptions: NavBarOption[] = [
 const NavBar = () => {
   const navBarButtons = navBarOptions.map((option) => {
     return (
-      <NavBarButton content={option} />
+      <NavBarButton key={option.label} content={option} />
     )
   })
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import PlayersListTable from "./PlayerListTable";
+import PlayersListTable from "./PlayersList";
 import { GET_PLAYERS } from "../../hooks/usePlayers";
 
 const playersListRes = [
@@ -1407,7 +1407,7 @@ const playersListRes = [
 ];
 
 export default {
-  title: 'PlayerListTable',
+  title: 'PlayersList',
   component: PlayersListTable,
   parameters: {
     layout: 'fullscreen',
