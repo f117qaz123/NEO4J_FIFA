@@ -15,6 +15,8 @@ export interface PlayerBriefData {
   potential: number;
   short_name: string;
   sofifa_id: number;
+  height_cm?: number;
+  weight_kg?: number;
 }
 
 const PlayersListTable = () => {

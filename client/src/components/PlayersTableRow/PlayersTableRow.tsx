@@ -2,26 +2,34 @@ import React from 'react';
 import { PlayerBriefData } from "../PlayersList/PlayersList";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
-import { getClubSrc, getPlayerSrc } from "../../utils";
+import { getClubSrc, getPlayerSrcId } from "../../utils";
+import { Link } from "@mui/material";
 
-const PlayersTableRow = ({playerData}: { playerData: PlayerBriefData }) => (
-  <TableRow
-    key={playerData.sofifa_id}
-    sx={{"&:last-child td, &:last-child th": {border: 0}}}
-  >
-    <TableCell component="th" scope="row">
-      <span><img src={getPlayerSrc(playerData.sofifa_id)} alt={playerData.short_name} /></span>
-      {playerData.short_name}
-    </TableCell>
-    <TableCell align="right">{playerData.age}</TableCell>
-    <TableCell align="right">{playerData.player_positions}</TableCell>
-    <TableCell align="right">{playerData.overall}</TableCell>
-    <TableCell align="right">{playerData.potential}</TableCell>
-    <TableCell align="center">
-      <img src={getClubSrc(playerData.clubs.ID)} alt={playerData.clubs.Name} />
-      <div>{playerData.clubs.Name}</div>
-    </TableCell>
-  </TableRow>
-);
+const PlayersTableRow: React.FC<PlayerBriefData> = ({sofifa_id, short_name, age, player_positions, overall, potential, clubs}) => {
+  const playerSrc = `https://cdn.sofifa.net/players/${getPlayerSrcId(sofifa_id)}/23_60.png`;
+
+  return (
+    <TableRow
+      key={sofifa_id}
+      sx={{"&:last-child td, &:last-child th": {border: 0}}}
+    >
+      <TableCell component="th" scope="row">
+        <Link href={`/player/${sofifa_id}`} underline="none" color='black'>
+        <span><img src={playerSrc}
+                   alt={short_name} /></span>
+          {short_name}
+        </Link>
+      </TableCell>
+      <TableCell align="right">{age}</TableCell>
+      <TableCell align="right">{player_positions}</TableCell>
+      <TableCell align="right">{overall}</TableCell>
+      <TableCell align="right">{potential}</TableCell>
+      <TableCell align="center">
+        <img src={getClubSrc(clubs.ID)} alt={clubs.Name}/>
+        <div>{clubs.Name}</div>
+      </TableCell>
+    </TableRow>
+  );
+};
 
 export default PlayersTableRow;

@@ -13,16 +13,14 @@ export default {
 const Template: ComponentStory<typeof PlayersTableRow> = (args) => <PlayersTableRow {...args} />;
 export const Default = Template.bind({});
 Default.args = {
-  playerData: {
-    "sofifa_id":158023,
-    "short_name":"L. Messi",
-    "player_positions":"RW, ST, CF",
-    "age":33,
-    "overall":93,
-    "potential":93,
-    "clubs":{
-      "ID":241,
-      "Name":"FC Barcelona",
-    }
+  "sofifa_id": 158023,
+  "short_name": "L. Messi",
+  "player_positions": "RW, ST, CF",
+  "age": 33,
+  "overall": 93,
+  "potential": 93,
+  "clubs": {
+    "ID": 241,
+    "Name": "FC Barcelona",
   }
 };
