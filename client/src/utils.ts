@@ -29,9 +29,8 @@ const getPlayerIdString = (idString: string) => {
 }
 
 
-export function getPlayerSrc (id: number) {
-  const idString = stringSplice(getPlayerIdString(id.toString()), 3, 0, '/');
-  return `https://cdn.sofifa.net/players/${idString}/23_60.png`;
+export function getPlayerSrcId (id: number) {
+  return stringSplice(getPlayerIdString(id.toString()), 3, 0, '/');
 }
 
 export function getClubSrc (id: number) {

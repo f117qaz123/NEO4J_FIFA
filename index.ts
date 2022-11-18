@@ -15,8 +15,23 @@ const typeDefs = gql`
 type players {
   sofifa_id: Int!
   short_name: String!
+  height_cm: Int!
+  weight_kg: Int!
+  pace: Int
+  shooting: Int
+  passing: Int
+  dribbling: Int
+  defending: Int
+  physic: Int
+  gk_diving: Int
+  gk_handling: Int
+  gk_kicking: Int
+  gk_reflexes: Int
+  gk_speed: Int
+  gk_positioning: Int
   age: Int!
   value_eur: Int!
+  wage_eur: Int!
   player_positions: String!
   overall: Int!
   potential: Int!

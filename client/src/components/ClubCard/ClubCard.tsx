@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Link } from "@mui/material";
 
-const styles = {
+export const styles = {
   media: {
     marginLeft: "auto",
     marginRight: "auto",

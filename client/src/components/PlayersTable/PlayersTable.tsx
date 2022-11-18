@@ -21,8 +21,8 @@ const PlayersTable = ({playersData}: { playersData: PlayerBriefData[] }) => {
     );
   };
 
-  const tableRowsCells = playersData.map((playerData: PlayerBriefData) => (
-    <PlayersTableRow key={playerData.sofifa_id} playerData={playerData}/>
+  const tableRowsCells = playersData.map((props: PlayerBriefData) => (
+    <PlayersTableRow key={props.sofifa_id} {...props} />
   ));
 
   return (
