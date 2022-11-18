@@ -37,3 +37,13 @@ export function getPlayerSrc (id: number) {
 export function getClubSrc (id: number) {
   return`https://cdn.sofifa.net/teams/${id}/60.png`
 }
+
+export function getPowerRadarData (obj: object, name: string) {
+  const dataSet = [];
+
+  for (const [category, value] of Object.entries(obj)) {
+    dataSet.push({category, [name]: value});
+  }
+
+  return dataSet;
+}
