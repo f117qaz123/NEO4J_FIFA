@@ -48,7 +48,7 @@ const PlayerBioCard = ({data}: { data: PlayerBriefData }) => {
   ];
 
   const playerBio = bioList.map((info) => (
-    <Typography key={data.short_name} align="left" gutterBottom variant="body2">
+    <Typography key={info.label} align="left" gutterBottom variant="body2">
       {info.label}: {info.value}
     </Typography>
   ));

@@ -9,10 +9,7 @@ const PlayersTableRow: React.FC<PlayerBriefData> = ({sofifa_id, short_name, age,
   const playerSrc = `https://cdn.sofifa.net/players/${getPlayerSrcId(sofifa_id)}/23_60.png`;
 
   return (
-    <TableRow
-      key={sofifa_id}
-      sx={{"&:last-child td, &:last-child th": {border: 0}}}
-    >
+    <TableRow sx={{"&:last-child td, &:last-child th": {border: 0}}}>
       <TableCell component="th" scope="row">
         <Link href={`/player/${sofifa_id}`} underline="none" color='black'>
         <span><img src={playerSrc}
