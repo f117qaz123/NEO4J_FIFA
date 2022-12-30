@@ -15,6 +15,7 @@ const typeDefs = gql`
 type players {
   sofifa_id: Int!
   short_name: String!
+  long_name: String!
   height_cm: Int!
   weight_kg: Int!
   pace: Int
@@ -36,7 +37,7 @@ type players {
   overall: Int!
   potential: Int!
   player_tags: String!
-  clubs: clubs! @relationship(type: "FROM", direction: OUT)
+  clubs: clubs @relationship(type: "FROM", direction: OUT)
 }
 
 type clubs {
