@@ -3,6 +3,7 @@ import { AppBar, Box, Toolbar } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import NavBarButton from "../NavBarButton/NavBarButton";
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
+import SearchBar from "../SearchBar/SearchBar";
 
 export interface NavBarOption {
   label: string;
@@ -50,6 +51,7 @@ const NavBar = () => {
             FIFADB
           </Typography>
           {navBarButtons}
+          <SearchBar />
         </Toolbar>
       </AppBar>
     </Box>
